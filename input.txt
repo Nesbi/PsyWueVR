@@ -1,0 +1,3 @@
+# Input file for Example Experiment
+subject=01
+gender=m
