@@ -68,7 +68,7 @@ public class ExperimentController : MonoBehaviour
 	{
 		if (experiment.isStarted && !experiment.isFinished) {
 			experiment.update ();
-		} else if (Input.GetButtonDown ("ButtonOK")) {
+		} else if (Input.GetButtonDown ("Submit")) {
 			experiment.start ();
 		}
 

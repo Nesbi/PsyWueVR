@@ -92,7 +92,7 @@ public class ExampleExperiment : Experiment
 	{
 		pause = true;
 		//pause until button pressed
-		while (!Input.GetButtonDown ("ButtonOK")) {
+		while (!Input.GetButtonDown ("Submit")) {
 			//Wait until key pressed
 			yield return null;
 		}
