@@ -23,20 +23,9 @@ public class ExampleExperiment : Experiment
 		phases.Add (new ExperimentPhase (1, rate));
 		phases.Add (new ExperimentPhase (8, end));
 
-		// GUI
-		guiRate.Hide ();
-
 		status = "Instructions";
 		instruction = "Instructions can be declarated here.";
 	}
-
-	protected override void startIndividual ()
-	{
-		isBlackout = false;
-		status = "Started";
-		instruction = "";
-	}
-
 
 	private void showPossibilities ()
 	{

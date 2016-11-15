@@ -52,6 +52,7 @@ public class ExperimentController : MonoBehaviour
 		experiment.subject = subject;
 		experiment.init ();
 		experiment.guiDefault = guiDefault;
+		guiDefault.Show ();
 
 		if (experiment == null)
 			Debug.Log ("<color=red>Error:</color> Can't find an attached experiment");
@@ -86,7 +87,7 @@ public class ExperimentController : MonoBehaviour
 	private void initSubject ()
 	{
 		subject = new Subject ();
-		subject.data = reader.read (experiment.folder + experiment.input);
+		subject.data = readInput ();
 
 		switch (subject.data ["gender"]) {
 		case "m":
@@ -95,6 +96,7 @@ public class ExperimentController : MonoBehaviour
 				Debug.Log ("<color=red>Error:</color> Can't find a male subject representation.");
 			
 			femaleRepresentation.SetActive (false);
+			maleRepresentation.SetActive (true);
 			break;
 		case "f":
 			subject.representation = femaleRepresentation.GetComponent<SubjectRepresentation> ();
@@ -102,6 +104,7 @@ public class ExperimentController : MonoBehaviour
 				Debug.Log ("<color=red>Error:</color> Can't find a female subject representation.");
 			
 			maleRepresentation.SetActive (false);
+			femaleRepresentation.SetActive (true);
 			break;
 		default:
 			Debug.Log ("<color=red>Error:</color> Gender of subject is not defined. ('gender=f' or 'gender=m')");
@@ -128,6 +131,25 @@ public class ExperimentController : MonoBehaviour
 		guiDefault.setBlackOut (blackout);
 	}
 
+
+	public Dictionary<string,string> readInput(){
+		Dictionary<string,string> input;
+		string direction = experiment.folder + experiment.input;
+
+		if (reader.doesFileExist (direction)) {
+			input = reader.read (direction);
+		}else{
+			// File doesn't exist => create default file with gender male
+			writer.open (direction);
+			writer.writeLine ("# Default Input file");
+			writer.writeLine ("gender=m");
+			writer.close ();
+			input = reader.read (direction);
+		}
+
+		return input;
+	}
+
 	public void HideCameraLayer (string layer)
 	{
 		subjectCamera.GetComponentInChildren<Camera> ().cullingMask &= ~(1 << LayerMask.NameToLayer (layer));
@@ -146,4 +168,5 @@ public class ExperimentController : MonoBehaviour
 			subjectCamera.transform.localScale = new Vector3 (0.00001f, 0.00001f, 0.00001f);
 		}
 	}
+
 }

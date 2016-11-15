@@ -4,6 +4,10 @@ using UnityEngine.UI;
 
 public abstract class GUIElement : MonoBehaviour {
 
+	public void Avake(){
+		Hide ();
+	}
+
 	public void Show(){
 		gameObject.SetActive(true);
 	}

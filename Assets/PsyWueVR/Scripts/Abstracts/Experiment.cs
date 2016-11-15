@@ -2,7 +2,7 @@
  * A subclass of this class should be attachted to the same GameObject as the ExperimentController
  * 
  * Made by Nico Balbach for the University of Würzburg
- * version 23-09-2016
+ * version 15-11-2016
  */
 using UnityEngine;
 using System.Collections.Generic;
@@ -50,10 +50,13 @@ public abstract class Experiment : MonoBehaviour
 	// name of the output file
 	public string output = "output.txt";
 
-	// init values of the experiment
-	public abstract void initValues ();
+	// init values of the experiment (executed before init() )
+	public virtual void initValues ()
+	{
+		// e.g. init different values like input/output or name here 
+	}
 
-	// init the experiment
+	// init the experiment (inputfile is already read at this point)
 	public abstract void init ();
 
 	// starts the experiment
@@ -68,8 +71,11 @@ public abstract class Experiment : MonoBehaviour
 		writer.writeHeader (name);
 	}
 
-	// individual start function to get additional control
-	protected abstract void startIndividual ();
+	// individual start function to get additional control. executed after read input, before creation of writer
+	protected virtual void startIndividual ()
+	{
+		// e.g dynamic output name (input data like subject number in name)	
+	}
 
 	// updates the state of the experiment. returns true until the experiment is finished (should at best not be overwritten)
 	public bool update ()

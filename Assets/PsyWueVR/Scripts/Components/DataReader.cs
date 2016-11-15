@@ -1,7 +1,7 @@
 ﻿/* DataReader for Psychological Experiments with Unity.
  * 
  * Made by Nico Balbach for the University of Würzburg
- * version 16-09-2016
+ * version 15-11-2016
  */
 
 using UnityEngine;
@@ -61,4 +61,18 @@ public class DataReader : MonoBehaviour
 
 		return data;
 	}
+
+	public bool doesFileExist (string fileDirectory)
+	{
+		bool fileexists;
+		try {
+			StreamReader testReader = new StreamReader (fileDirectory);
+			fileexists = true;
+		} catch (System.IO.FileNotFoundException  e) {
+			fileexists = false;
+		}
+
+		return fileexists;
+	}
+
 }
