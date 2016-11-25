@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{6B804062-FF19-18A6-6563-E3A58C918505}") = "psywuevr", "Assembly-CSharp.csproj", "{46E1BF0D-8001-67D2-824D-78ED087D66E5}"
+Project("{6B56E3B9-0AEE-051D-DCA7-297695687427}") = "PsyWueVR", "Assembly-CSharp.csproj", "{42DCDF0E-F78E-3C01-EB36-81E8CE808ED0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{46E1BF0D-8001-67D2-824D-78ED087D66E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{46E1BF0D-8001-67D2-824D-78ED087D66E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{46E1BF0D-8001-67D2-824D-78ED087D66E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{46E1BF0D-8001-67D2-824D-78ED087D66E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42DCDF0E-F78E-3C01-EB36-81E8CE808ED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42DCDF0E-F78E-3C01-EB36-81E8CE808ED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42DCDF0E-F78E-3C01-EB36-81E8CE808ED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42DCDF0E-F78E-3C01-EB36-81E8CE808ED0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
