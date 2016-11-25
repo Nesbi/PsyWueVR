@@ -3,7 +3,7 @@
 PsyWueVR is a framework for easy development of psychological experiments in Virtual Reality with Unity.
 Developed for the Department of Psychology I at the University of Würzburg.
 
-![UnityUI](https://raw.githubusercontent.com/NesbiDevelopment/PsyWueVR/master/readme/UnityUI.png)
+![unityui](https://cloud.githubusercontent.com/assets/23743591/20633332/a5fb113a-b345-11e6-8696-22c2445bc1df.PNG)
 
 ## Installation
 
@@ -12,8 +12,7 @@ Developed for the Department of Psychology I at the University of Würzburg.
 * Create a new or open an existing Unityproject
 * Download the unitypackage and run it
 
-![Import into Unity](https://raw.githubusercontent.com/NesbiDevelopment/PsyWueVR/master/readme/Import.png)
-
+![import](https://cloud.githubusercontent.com/assets/23743591/20633345/ba9cb7d8-b345-11e6-85e6-e441f09d73b5.PNG)
 
 ## Features
 
@@ -92,7 +91,7 @@ status = "Status";
 instruction = "Instruction";		
 ```
 
-![Import into Unity](https://raw.githubusercontent.com/NesbiDevelopment/PsyWueVR/master/readme/GUI.png)
+![gui](https://cloud.githubusercontent.com/assets/23743591/20633344/b8818a5a-b345-11e6-8676-d4e06d957f73.PNG)
 
 ### SubjectRepresentation
 Subject representation scripts for male and female with easy object access.
