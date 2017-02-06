@@ -10,7 +10,7 @@ Developed for the Department of Psychology I at the University of Würzburg.
 * Requirements:
 	* Unity 5.0 or higher.
 * Create a new or open an existing Unityproject
-* Download the unitypackage and run it
+* [Download](https://github.com/NesbiDevelopment/PsyWueVR/releases) the latest release and run the unitypackage
 
 ![import](https://cloud.githubusercontent.com/assets/23743591/20633345/ba9cb7d8-b345-11e6-85e6-e441f09d73b5.PNG)
 
